@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+
+        <!-- Generated barcode image-->
+        <image class="barcodeIMG" id="barcodeIMG"></image>
+
+        <!-- Barcode display -->
+        <span id="barcodeText"></span>
+
+        <!-- Input box -->
+        <form text-align:center>
+            <input type="text" onkeyup="grabText()" id="barcodeInput" maxlength="20"><br>
+        </form>
+
+        <!-- Font picker -->
+        <form>
+            <select class="fontPicker" id="fontPicker">
+                <option value="'Libre39'">CODE-39</option>
+                <option value="'Arial'">TEXT</option>
+            </select>
+        </form>
+        
+        <!-- Generate button -->
+        <button  onclick="barcode2img()">Generate Image</button>
+
+
+        <!-- Libraries -->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.js"></script>      
+
+        <div class="footer">
+            <a href="https://basvs.dev"><img src="basvs.png" width="10%" height="10%"></a>
+        </div>
+
+    </body>
+</html>
